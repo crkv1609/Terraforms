@@ -35,7 +35,7 @@ resource "aws_instance" "server" {
       type     = "ssh"
       user     = "ec2-user"
       host     = self.public_ip
-      private_key = file("./terraform_key.pem")
+      private_key = file("./Terraform_key.pem")
     }
 
     provisioner "file" {
@@ -74,7 +74,7 @@ resource "aws_instance" "docker" {
       type     = "ssh"
       user     = "ec2-user"
       host     = self.public_ip
-      private_key = file("./terraform_key.pem")
+      private_key = file("./Terraform_key.pem")
     }
 
     provisioner "file" {
